@@ -17,7 +17,7 @@ jobs:
           script: |
             const issue_number = context.payload.pull_request.number;
             const comment_body = "👋 Welcome to the project! Thanks for your first pull request. We appreciate your contribution!";
-            await github.issues.createComment({
+            await github.reset.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue_number,
